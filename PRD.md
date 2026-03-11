@@ -2,103 +2,125 @@
 
 ## Vision
 
-**Muzzle** is an AI-powered audio privacy system for Bluetooth headphones that enables private voice interactions without being overheard.
+**Muzzle** is an AI-powered audio privacy system that enables private voice interactions without being overheard.
 
 **Tagline:** "Your AI hears you. Your neighbors can't."
 
 ## Problem Statement
 
-- Users want to have private conversations and voice commands
+- Users can't speak out loud in public spaces (offices, VA, hospitals, transit)
+- Phone users are inconsiderate to those around them
 - Bluetooth headphones leak audio to nearby listeners
-- No existing solution provides AI-powered audio privacy
-- Need for discreet voice interaction in public/shared spaces
+- No existing solution provides **silent voice input** + **private transcription**
+- Need for discreet voice interaction without bothering others
 
 ## Solution
 
 Muzzle provides:
-1. **Audio Capture** — Listen via Bluetooth headphones
-2. **Audio Muzzling** — Silence output so others can't hear
-3. **Cloud Transcription** — Send audio to cloud for processing (B1)
-4. **Privacy First** — Audio muzzled locally; transcription via secure cloud API
+1. **Silent Voice Input** — Speak without others hearing (audio muzzled)
+2. **Transcription** — Convert voice to text (cloud-based)
+3. **AI Cleanup** — Make incomprehensible speech comprehensible
+4. **Respectful** — You can use voice commands in public without bothering anyone
+5. **Privacy First** — Audio muzzled locally; processing via secure APIs
 
-## Core Features
+---
 
-### B1 (MVP)
+## Release Strategy
+
+### v1.0 (CURRENT FOCUS)
+**Static site MVP — Get it out the door.**
+
+- [x] Landing page (Astro)
+- [x] Dark blue gradient design
+- [x] Core messaging
+- [x] CTA button
+- [ ] Responsive finalization
+- ❌ NO server-side models
+- ❌ NO backend
+- ❌ NO Bluetooth/audio features yet
+
+**Goal:** Ship a clean, minimal landing page. Iterate based on feedback.
+
+### B1 (Phase 2 — Full Product)
+**Audio privacy + transcription system.**
+
+Features:
 - [ ] Bluetooth headphone pairing
 - [ ] Audio capture & muzzling (silence output)
-- [ ] Cloud transcription (no on-device models)
-- [ ] Web dashboard (blue theme, index/dashboard/docs pages)
+- [ ] Cloud transcription (Whisper, Google Speech-to-Text, etc.)
+- [ ] Web dashboard (blue theme)
 - [ ] Raw transcription storage
 
-**B1 Scope:** Audio privacy + transcription. No on-device AI models (Pico/Nano too small for complexity).
+**Scope:** Audio privacy + transcription. No on-device AI models (Pico/Nano too small for complexity).
 
-### Phase 2
-- [ ] AI-cleaned transcription (raw + comprehensible versions)
+### Phase 3 (Future)
+**AI-cleaned transcription pipeline.**
+
+Features:
+- [ ] Raw transcription (from voice-to-text)
+- [ ] AI-cleaned version (makes incomprehensible speech comprehensible)
+- [ ] Both versions available to user
 - [ ] Voice commands & response generation
 - [ ] Custom AI personalities
-- [ ] Battery optimization
-- [ ] Multi-device support
 
-### Phase 3
-- [ ] Mobile app
-- [ ] Cloud sync (optional)
-- [ ] Advanced analytics
-- [ ] Community features
+**Note:** Requires server-side model inference. Defer until after B1.
+
+---
 
 ## Technical Stack
 
-### B1
+### v1.0
+- **Frontend:** Astro (static site)
+- **Design:** Dark blue gradient, minimal
+- **Hosting:** Vercel (or similar)
+- **No backend, no models**
+
+### B1+
 - **Frontend:** Astro + React (blue theme)
 - **Backend:** Node.js / Python
 - **Audio:** Web Audio API, Bluetooth API
-- **Transcription:** Cloud API (Whisper, Google Speech-to-Text, or similar)
+- **Transcription:** Cloud API (Whisper, Google Speech-to-Text, etc.)
 - **Database:** SQLite (local)
 
-### Phase 2+
-- **AI:** Local LLM (Ollama, Llama 2, or similar) — added after B1
+### Phase 3+
+- **AI:** Cloud APIs for transcription cleanup (not local models)
 
-## User Flows
-
-### Flow 1: Setup
-1. User opens Muzzle web dashboard
-2. Pairs Bluetooth headphones
-3. Configures AI personality
-4. Starts using voice commands
-
-### Flow 2: Voice Interaction
-1. User speaks into headphones
-2. Audio captured & muzzled (silent)
-3. AI processes voice locally
-4. Response generated & played (silently)
-5. User hears response in headphones only
+---
 
 ## Success Metrics
 
+### v1.0
+- [ ] Landing page live and responsive
+- [ ] Clear messaging on product positioning
+- [ ] CTA button functional
+
+### B1
 - [ ] Audio muzzling works (neighbors can't hear)
-- [ ] Voice recognition accuracy > 95%
+- [ ] Transcription accuracy > 95%
 - [ ] Response latency < 2 seconds
-- [ ] Battery drain < 10% per hour
 - [ ] User satisfaction > 4.5/5
 
-## Timeline (B1)
+---
 
-- **Week 1-2:** Audio capture & muzzling prototype
-- **Week 3:** Bluetooth connectivity
-- **Week 4:** Cloud transcription integration
-- **Week 5:** Web dashboard (index, dashboard, docs)
-- **Week 6+:** Testing & launch
+## Timeline
 
-## Risks & Mitigations
+- **v1.0 (NOW):** Static site, ship it
+- **B1 (Later):** Audio + transcription features
+- **Phase 3 (Future):** AI cleanup pipeline
 
-| Risk | Mitigation |
-|------|-----------|
-| Audio latency | Use optimized local LLM |
-| Battery drain | Implement power-saving modes |
-| Bluetooth stability | Robust reconnection logic |
-| Privacy concerns | All processing local, no cloud |
+---
+
+## Philosophy
+
+**Keep it simple. Ship it. Iterate.**
+
+- v1.0: Static site only. No over-engineering.
+- B1: Add features only when needed.
+- Phase 3: Transcription cleanup is a nice-to-have, not a blocker.
 
 ---
 
 **Created:** 2026-03-11  
-**Status:** Active Development  
+**Last Updated:** 2026-03-11  
+**Status:** v1.0 in development  
 **Lead:** Paul Vudmaska
