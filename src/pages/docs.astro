@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Muzzle Documentation">
+  <div class="docs">
+    <h1>Documentation</h1>
+
+    <section class="doc-section">
+      <h2>Getting Started</h2>
+      <h3>1. Setup</h3>
+      <p>Clone the repo and install dependencies:</p>
+      <pre><code>git clone https://github.com/voodoo/muzzle.git
+cd muzzle
+npm install</code></pre>
+
+      <h3>2. Development</h3>
+      <p>Start the dev server:</p>
+      <pre><code>npm run dev</code></pre>
+
+      <h3>3. Build</h3>
+      <p>Build for production:</p>
+      <pre><code>npm run build</code></pre>
+    </section>
+
+    <section class="doc-section">
+      <h2>Architecture</h2>
+      <p>Muzzle consists of three main components:</p>
+      <ul>
+        <li><strong>Audio Layer:</strong> Captures audio from Bluetooth headphones</li>
+        <li><strong>AI Layer:</strong> Processes voice locally with LLM</li>
+        <li><strong>Muzzling Layer:</strong> Silences output so others can't hear</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>API Reference</h2>
+      <p>Coming soon...</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>FAQ</h2>
+      <h3>Is my audio private?</h3>
+      <p>Yes. All processing happens locally on your device. No data is sent to the cloud.</p>
+
+      <h3>What headphones are supported?</h3>
+      <p>Any Bluetooth headphones. We're testing with popular models.</p>
+
+      <h3>How much battery does it use?</h3>
+      <p>We're optimizing for < 10% battery drain per hour.</p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .docs {
+    padding: 2rem 0;
+  }
+
+  .docs h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .doc-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  }
+
+  .doc-section:last-child {
+    border-bottom: none;
+  }
+
+  .doc-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .doc-section h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .doc-section p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .doc-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .doc-section li {
+    color: #cbd5e1;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .doc-section li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+  }
+
+  pre {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid #3b82f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+
+  code {
+    color: #93c5fd;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+  }
+</style>

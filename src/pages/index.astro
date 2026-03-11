@@ -1,96 +1,139 @@
 ---
-// Muzzle — Landing Page
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muzzle — Voice Privacy & Control</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #050d1a 0%, #0f1f35 100%);
-            color: #e0e0e0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        .container {
-            max-width: 800px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 8vw, 3.5rem);
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-
-        .tagline {
-            font-size: clamp(1rem, 4vw, 1.5rem);
-            color: #a0a0a0;
-            margin-bottom: 2rem;
-        }
-
-        .cta {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: #0066ff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .cta:hover {
-            background: #0052cc;
-        }
-
-        .status {
-            margin-top: 3rem;
-            padding: 1.5rem;
-            background: rgba(0, 102, 255, 0.1);
-            border-left: 4px solid #0066ff;
-            border-radius: 4px;
-            text-align: left;
-        }
-
-        .status h3 {
-            color: #0066ff;
-            margin-bottom: 0.5rem;
-        }
-
-        .status p {
-            color: #a0a0a0;
-            font-size: 0.95rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Muzzle</h1>
-        <p class="tagline">Voice Privacy & Control</p>
-        
-        <div class="status">
-            <h3>🚀 Early Development</h3>
-            <p>We're building something great. Check back soon for updates.</p>
-        </div>
-
-        <a href="#" class="cta">Learn More</a>
+<Layout title="Muzzle — AI Audio Privacy">
+  <div class="hero">
+    <h1>🔇 Muzzle</h1>
+    <p class="tagline">Your AI hears you. Your neighbors can't.</p>
+    <p class="description">
+      AI-powered audio privacy for Bluetooth headphones. Have private conversations and voice commands without being overheard.
+    </p>
+    <div class="cta">
+      <button onclick="window.location.href='/dashboard'">Launch Dashboard</button>
+      <button onclick="window.location.href='/docs'" class="secondary">Learn More</button>
     </div>
-</body>
-</html>
+  </div>
+
+  <section class="features">
+    <h2>Core Features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>🎧 Bluetooth Ready</h3>
+        <p>Seamless pairing with your headphones</p>
+      </div>
+      <div class="feature">
+        <h3>🤖 AI Powered</h3>
+        <p>Local voice recognition & response generation</p>
+      </div>
+      <div class="feature">
+        <h3>🔒 Privacy First</h3>
+        <p>All processing local, no cloud storage</p>
+      </div>
+      <div class="feature">
+        <h3>🔇 Audio Muzzling</h3>
+        <p>Silence output so others can't hear</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="status">
+    <h2>Development Status</h2>
+    <p>🚀 Early Development — MVP coming soon</p>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #60a5fa;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    color: #93c5fd;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+
+  .cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  button.secondary {
+    background: transparent;
+    border: 2px solid #3b82f6;
+    color: #93c5fd;
+  }
+
+  button.secondary:hover {
+    background: #1e3a8a;
+  }
+
+  .features {
+    margin: 4rem 0;
+  }
+
+  .features h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature {
+    background: rgba(30, 58, 138, 0.5);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid #3b82f6;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+  }
+
+  .feature h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .feature p {
+    color: #cbd5e1;
+  }
+
+  .status {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(30, 58, 138, 0.3);
+    border-radius: 0.75rem;
+    margin-top: 4rem;
+  }
+
+  .status h2 {
+    margin-bottom: 1rem;
+  }
+</style>

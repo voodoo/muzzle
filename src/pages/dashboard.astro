@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Muzzle Dashboard">
+  <div class="dashboard">
+    <h1>Dashboard</h1>
+    <p class="subtitle">Control your Muzzle audio privacy system</p>
+
+    <div class="dashboard-grid">
+      <section class="card">
+        <h2>🎧 Bluetooth Status</h2>
+        <div class="status-indicator disconnected">Disconnected</div>
+        <button>Connect Headphones</button>
+      </section>
+
+      <section class="card">
+        <h2>🤖 AI Status</h2>
+        <div class="status-indicator ready">Ready</div>
+        <p class="info">Local LLM loaded and ready</p>
+      </section>
+
+      <section class="card">
+        <h2>🔇 Audio Muzzling</h2>
+        <div class="toggle">
+          <input type="checkbox" id="muzzle-toggle" />
+          <label for="muzzle-toggle">Enable Muzzling</label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>⚙️ Settings</h2>
+        <ul class="settings-list">
+          <li>AI Personality: Default</li>
+          <li>Volume: 75%</li>
+          <li>Latency: 1.2s</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="activity">
+      <h2>Recent Activity</h2>
+      <p class="placeholder">No activity yet. Connect your headphones to get started.</p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .dashboard {
+    padding: 2rem 0;
+  }
+
+  .dashboard h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .card {
+    background: rgba(30, 58, 138, 0.5);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid #3b82f6;
+  }
+
+  .card h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .status-indicator {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  .status-indicator.disconnected {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+  }
+
+  .status-indicator.ready {
+    background: rgba(34, 197, 94, 0.2);
+    color: #86efac;
+  }
+
+  .info {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+  }
+
+  .toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .toggle input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .toggle label {
+    cursor: pointer;
+    color: #e0e7ff;
+  }
+
+  .settings-list {
+    list-style: none;
+    color: #cbd5e1;
+  }
+
+  .settings-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  }
+
+  .settings-list li:last-child {
+    border-bottom: none;
+  }
+
+  .activity {
+    background: rgba(30, 58, 138, 0.3);
+    padding: 2rem;
+    border-radius: 0.75rem;
+  }
+
+  .activity h2 {
+    margin-bottom: 1rem;
+  }
+
+  .placeholder {
+    color: #94a3b8;
+    font-style: italic;
+  }
+</style>
