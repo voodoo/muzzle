@@ -17,21 +17,24 @@
 
 Muzzle provides:
 1. **Audio Capture** — Listen via Bluetooth headphones
-2. **AI Processing** — Local voice recognition & response generation
-3. **Audio Muzzling** — Silence output so others can't hear
-4. **Privacy First** — All processing local, no cloud storage
+2. **Audio Muzzling** — Silence output so others can't hear
+3. **Cloud Transcription** — Send audio to cloud for processing (B1)
+4. **Privacy First** — Audio muzzled locally; transcription via secure cloud API
 
 ## Core Features
 
-### MVP (Phase 1)
+### B1 (MVP)
 - [ ] Bluetooth headphone pairing
 - [ ] Audio capture & muzzling (silence output)
-- [ ] Basic voice command recognition
-- [ ] AI response generation (local LLM)
-- [ ] Web dashboard (blue theme)
+- [ ] Cloud transcription (no on-device models)
+- [ ] Web dashboard (blue theme, index/dashboard/docs pages)
+- [ ] Raw transcription storage
+
+**B1 Scope:** Audio privacy + transcription. No on-device AI models (Pico/Nano too small for complexity).
 
 ### Phase 2
-- [ ] Advanced voice commands
+- [ ] AI-cleaned transcription (raw + comprehensible versions)
+- [ ] Voice commands & response generation
 - [ ] Custom AI personalities
 - [ ] Battery optimization
 - [ ] Multi-device support
@@ -44,11 +47,15 @@ Muzzle provides:
 
 ## Technical Stack
 
+### B1
 - **Frontend:** Astro + React (blue theme)
 - **Backend:** Node.js / Python
 - **Audio:** Web Audio API, Bluetooth API
-- **AI:** Local LLM (Ollama, Llama 2, or similar)
+- **Transcription:** Cloud API (Whisper, Google Speech-to-Text, or similar)
 - **Database:** SQLite (local)
+
+### Phase 2+
+- **AI:** Local LLM (Ollama, Llama 2, or similar) — added after B1
 
 ## User Flows
 
@@ -73,12 +80,13 @@ Muzzle provides:
 - [ ] Battery drain < 10% per hour
 - [ ] User satisfaction > 4.5/5
 
-## Timeline
+## Timeline (B1)
 
-- **Week 1-2:** Audio muzzling prototype
-- **Week 3-4:** AI integration
-- **Week 5-6:** Web dashboard
-- **Week 7+:** Testing & launch
+- **Week 1-2:** Audio capture & muzzling prototype
+- **Week 3:** Bluetooth connectivity
+- **Week 4:** Cloud transcription integration
+- **Week 5:** Web dashboard (index, dashboard, docs)
+- **Week 6+:** Testing & launch
 
 ## Risks & Mitigations
 
