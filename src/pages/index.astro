@@ -5,10 +5,11 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Muzzle — Voice Privacy & Control">
   <div class="hero">
     <h1>🔇 Muzzle</h1>
-    <p class="tagline">Your AI hears you. Your neighbors can't.</p>
+    <p class="tagline">Audio Isolation Headphones</p>
     <p class="description">
-      Voice privacy and control. Have private conversations without being overheard.
+      Premium headphones engineered for audio isolation. Use them like any headphones—music, calls, podcasts. Or toggle to voice mode and talk to your AI silently, anywhere, without anyone hearing a word.
     </p>
+    <p class="subtagline">Your AI hears you. Your neighbors can't.</p>
     <div class="cta">
       <button onclick="window.location.href='https://cal.com/paul-vudmaska/15min'">Get Early Access</button>
     </div>
@@ -18,20 +19,20 @@ import Layout from '../layouts/Layout.astro';
     <h2>Why Muzzle?</h2>
     <div class="feature-grid">
       <div class="feature">
-        <h3>🤐 Silent Voice Input</h3>
-        <p>Speak in public without bothering others. Audio muzzled locally.</p>
+        <h3>🎧 Premium Audio Hardware</h3>
+        <p>Big, bulky by design. Engineered to muffle ambient noise and capture your voice with studio-quality clarity.</p>
       </div>
       <div class="feature">
-        <h3>🏥 Respectful Everywhere</h3>
-        <p>Use voice commands in offices, hospitals, transit, waiting rooms.</p>
+        <h3>🤐 Silent Voice Input</h3>
+        <p>Each side has a speaker + microphone. Toggle to voice mode and talk to your AI without anyone hearing a word.</p>
       </div>
       <div class="feature">
         <h3>🤖 AI Cleanup</h3>
-        <p>Incomprehensible speech made clear. Both raw + cleaned versions.</p>
+        <p>Incomprehensible speech made clear. Both raw + cleaned versions for training and accuracy.</p>
       </div>
       <div class="feature">
-        <h3>🔒 Your Privacy</h3>
-        <p>You control what gets transcribed and stored. Secure APIs only.</p>
+        <h3>🏥 Respectful Everywhere</h3>
+        <p>Use voice commands in offices, hospitals, transit, waiting rooms. No one knows you're talking to AI.</p>
       </div>
     </div>
   </section>
@@ -86,8 +87,17 @@ import Layout from '../layouts/Layout.astro';
     font-size: 1.1rem;
     color: #cbd5e1;
     max-width: 600px;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto 1.5rem;
     line-height: 1.6;
+  }
+
+  .subtagline {
+    font-size: 1.25rem;
+    color: #60a5fa;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    font-weight: 600;
+    font-style: italic;
   }
 
   .cta {
