@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Muzzle — Voice Privacy & Control">
   <div class="hero">
+    <img src="/headphones-icon.jpg" alt="Muzzle Headphones" class="hero-icon" />
     <h1>🔇 Muzzle</h1>
     <p class="tagline">Audio Isolation Headphones</p>
     <p class="description">
@@ -67,6 +68,14 @@ import Layout from '../layouts/Layout.astro';
     text-align: center;
     padding: 6rem 2rem;
     margin-bottom: 4rem;
+  }
+
+  .hero-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
   }
 
   .hero h1 {
