@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "jsxImportSource": "react",
+    "jsx": "react-jsx",
+    "strict": true,
+    "moduleResolution": "bundler"
+  }
+}

@@ -1,46 +1,33 @@
-# Muzzle 🔇
+# Muzzle
 
-**AI-powered audio privacy for Bluetooth headphones.**
+**Voice Privacy & Control**
 
-Your AI hears you. Your neighbors can't.
-
-## Overview
-
-Muzzle is a privacy-first audio system that:
-- Listens to your voice via Bluetooth headphones
-- Processes audio locally with AI
-- Muzzles (silences) the audio output so others can't hear
-- Enables private conversations and voice commands
+A product for managing voice privacy and control in digital communications.
 
 ## Status
 
-🚀 **Early Development** — Initial repo setup, ready for iteration.
+🚀 **Early Development** — Starting from scratch, iterating rapidly.
 
-## Project Structure
+## Structure
 
-```
-muzzle/
-├── README.md           # This file
-├── ROADMAP.md          # Development roadmap
-├── docs/               # Documentation
-├── src/                # Source code
-│   ├── audio/          # Audio processing
-│   ├── ai/             # AI integration
-│   └── bluetooth/      # Bluetooth connectivity
-├── web/                # Web interface (blue theme)
-└── tests/              # Test suite
+- `/src` — Astro website source
+- `/docs` — Product documentation and PRD
+- `/public` — Static assets
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
 ```
 
 ## Next Steps
 
-1. Define core architecture
-2. Prototype audio muzzling
-3. Integrate AI voice processing
-4. Build Bluetooth connectivity
-5. Create web dashboard
+- [ ] Complete PRD
+- [ ] Build website skeleton
+- [ ] Define core features
+- [ ] Iterate with feedback
 
 ---
 
-**Created:** 2026-03-11  
-**Lead:** Paul Vudmaska  
-**Status:** Active Development
+*Created: 2026-03-11*

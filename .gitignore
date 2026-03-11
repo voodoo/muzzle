@@ -1,11 +1,7 @@
 node_modules/
+dist/
+.astro/
 .env
 .env.local
-dist/
-build/
 *.log
 .DS_Store
-__pycache__/
-*.pyc
-.venv/
-venv/

@@ -1,0 +1,96 @@
+---
+// Muzzle — Landing Page
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzzle — Voice Privacy & Control</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #050d1a 0%, #0f1f35 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .tagline {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #0066ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .cta:hover {
+            background: #0052cc;
+        }
+
+        .status {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(0, 102, 255, 0.1);
+            border-left: 4px solid #0066ff;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        .status h3 {
+            color: #0066ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .status p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Muzzle</h1>
+        <p class="tagline">Voice Privacy & Control</p>
+        
+        <div class="status">
+            <h3>🚀 Early Development</h3>
+            <p>We're building something great. Check back soon for updates.</p>
+        </div>
+
+        <a href="#" class="cta">Learn More</a>
+    </div>
+</body>
+</html>
