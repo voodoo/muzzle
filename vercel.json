@@ -1,5 +1,6 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "astro"
+  "buildCommand": "echo 'Static site — no build needed'",
+  "outputDirectory": ".",
+  "framework": null,
+  "public": true
 }
