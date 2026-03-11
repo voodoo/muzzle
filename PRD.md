@@ -8,18 +8,20 @@
 
 ## Problem Statement
 
-- Users want to have private conversations and voice commands
+- Users can't speak out loud in public spaces (offices, VA, hospitals, transit)
+- Phone users are inconsiderate to those around them
 - Bluetooth headphones leak audio to nearby listeners
-- No existing solution provides AI-powered audio privacy
-- Need for discreet voice interaction in public/shared spaces
+- No existing solution provides **silent voice input** + **private transcription**
+- Need for discreet voice interaction without bothering others
 
 ## Solution
 
 Muzzle provides:
-1. **Audio Privacy** — Muzzle output so others can't hear
-2. **Transcription** — Convert voice to text
+1. **Silent Voice Input** — Speak without others hearing (audio muzzled)
+2. **Transcription** — Convert voice to text (cloud-based)
 3. **AI Cleanup** — Make incomprehensible speech comprehensible
-4. **Privacy First** — Audio muzzled locally; processing via secure APIs
+4. **Respectful** — You can use voice commands in public without bothering anyone
+5. **Privacy First** — Audio muzzled locally; processing via secure APIs
 
 ---
 
